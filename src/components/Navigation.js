@@ -58,7 +58,6 @@ const NavLink = styled.a`
   position: relative;
   padding: 0.5rem 0;
   transition: all 0.4s ease;
-  cursor: pointer;
   
   &:hover {
     color: #ffd700;

@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faPhone, faMapMarkerAlt, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope, /*faPhone,*/ /*faMapMarkerAlt,*/ faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+// import { faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faYoutube } from '@fortawesome/free-brands-svg-icons';
 // import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const ContactContainer = styled.div`
@@ -274,7 +275,7 @@ function Contact() {
           
           <ContactItem>
             <ContactIcon>
-              <FontAwesomeIcon icon={faPhone} />
+              <FontAwesomeIcon icon={faGithub} />
             </ContactIcon>
             <ContactDetails>
               <ContactLabel>GitHub</ContactLabel>
@@ -284,7 +285,7 @@ function Contact() {
           
           <ContactItem>
             <ContactIcon>
-              <FontAwesomeIcon icon={faMapMarkerAlt} />
+              <FontAwesomeIcon icon={faYoutube} />
             </ContactIcon>
             <ContactDetails>
               <ContactLabel>YouTube</ContactLabel>
@@ -369,7 +370,7 @@ function Contact() {
           <FontAwesomeIcon icon={faGithub} />
         </SocialLink>
         <SocialLink href="https://youtube.com/@eliteabhinay" target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon icon={faTwitter} />
+          <FontAwesomeIcon icon={faYoutube} />
         </SocialLink>
         <SocialLink href="mailto:abhinaytharu5@gmail.com">
           <FontAwesomeIcon icon={faEnvelope} />

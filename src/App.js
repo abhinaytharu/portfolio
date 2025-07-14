@@ -1,14 +1,15 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, Suspense, lazy } from 'react';
 import anime from 'animejs';
 import styled from 'styled-components';
-import Header from './components/Header';
-import Timeline from './components/Timeline';
-import About from './components/About';
-import Experience from './components/Experience';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
-import Navigation from './components/Navigation';
+
+const Header = lazy(() => import('./components/Header'));
+const Timeline = lazy(() => import('./components/Timeline'));
+const About = lazy(() => import('./components/About'));
+const Experience = lazy(() => import('./components/Experience'));
+const Skills = lazy(() => import('./components/Skills'));
+const Projects = lazy(() => import('./components/Projects'));
+const Contact = lazy(() => import('./components/Contact'));
+const Navigation = lazy(() => import('./components/Navigation'));
 
 const AppContainer = styled.div`
   min-height: 100vh;
@@ -174,6 +175,7 @@ function App() {
 
   return (
     <AppContainer ref={appRef}>
+      <Suspense fallback={<div>Loading...</div>}>
       <Navigation />
       <ContentWrapper>
         <Header />
@@ -196,6 +198,7 @@ function App() {
           <Contact />
         </Section>
       </ContentWrapper>
+      </Suspense>
     </AppContainer>
   );
 }

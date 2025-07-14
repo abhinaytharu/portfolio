@@ -128,7 +128,7 @@ const Button = styled.button`
   border: none;
   border-radius: 50px;
   font-weight: 600;
-  cursor: pointer;
+  // cursor: pointer;
   transition: all 0.4s ease;
   display: flex;
   align-items: center;
